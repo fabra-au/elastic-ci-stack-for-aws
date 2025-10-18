@@ -1,6 +1,18 @@
 [
-  {
-    "ParameterKey": "BuildkiteAgentToken",
-    "ParameterValue": "<insert-your-token>"
-  }
+    {
+        "ParameterKey": "BuildkiteAgentToken",
+        "ParameterValue": "<insert agent token>"
+    },
+    {
+        "ParameterKey": "BuildkiteQueue",
+        "ParameterValue": "<insert buildkite queue>"
+    },
+    {
+        "ParameterKey": "ImageId",
+        "ParameterValue": "<insert output AMI>"
+    },
+    {
+        "ParameterKey": "InstanceTypes",
+        "ParameterValue": "m7a.xlarge"
+    }
 ]

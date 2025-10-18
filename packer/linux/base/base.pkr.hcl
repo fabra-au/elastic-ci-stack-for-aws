@@ -101,6 +101,11 @@ build {
     script = "scripts/install-docker.sh"
   }
 
+  # Fabra utilities
+  provisioner "shell" {
+    script = "scripts/install-fabra-base.sh"
+  }
+
   # CloudWatch agent
   provisioner "shell" {
     script = "scripts/install-cloudwatch-agent.sh"
