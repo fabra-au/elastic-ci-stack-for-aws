@@ -11,6 +11,18 @@ echo Install phase cli
 curl -fsSL https://pkg.phase.dev/install.sh | bash
 phase --version
 
+echo Install encore cli
+curl -L https://encore.dev/install.sh | bash
+
+echo "Copying encore binary to /usr/local/bin for system-wide access..."
+sudo cp $HOME/.encore/bin/encore /usr/local/bin/encore
+sudo chown root:root /usr/local/bin/encore
+sudo chmod +x /usr/local/bin/encore
+
+echo "Verifying encore is available system-wide..."
+which encore
+encore version
+
 echo Install Node.js
 sudo dnf install -y nodejs20 
 node -v
@@ -29,7 +41,7 @@ sudo cp $HOME/.bun/bin/bunx /usr/local/bin/bunx
 sudo chown root:root /usr/local/bin/bunx
 sudo chmod +x /usr/local/bin/bunx
 
-echo "Verifying binaries are available system-wide..."
+echo "Verifying bun is available system-wide..."
 which bun
 bun --version
 which bunx
